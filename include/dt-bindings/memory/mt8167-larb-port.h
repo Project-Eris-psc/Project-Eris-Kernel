@@ -1,0 +1,59 @@
+/*
+ * Copyright (c) 2015-2016 MediaTek Inc.
+ * Author: Honghui Zhang <honghui.zhang@mediatek.com>
+ *
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License version 2 as
+ * published by the Free Software Foundation.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ */
+#ifndef _DTS_IOMMU_PORT_MT8167_H_
+#define _DTS_IOMMU_PORT_MT8167_H_
+
+#define MT8167_LARB0_PORT_NUM		8
+#define MT8167_LARB1_PORT_NUM		13
+#define MT8167_LARB2_PORT_NUM		7
+
+#define MT8167_LARB0_PORT(port)		(port)
+#define MT8167_LARB1_PORT(port)		((port) + MT8167_LARB0_PORT_NUM)
+#define MT8167_LARB2_PORT(port)		((port) + MT8167_LARB0_PORT_NUM + MT8167_LARB1_PORT_NUM)
+
+/* larb0 */
+#define M4U_PORT_DISP_OVL0		MT8167_LARB0_PORT(0)
+#define M4U_PORT_DISP_RDMA0		MT8167_LARB0_PORT(1)
+#define M4U_PORT_DISP_WDMA0		MT8167_LARB0_PORT(2)
+#define M4U_PORT_DISP_RDMA1		MT8167_LARB0_PORT(3)
+#define M4U_PORT_MDP_RDMA		MT8167_LARB0_PORT(4)
+#define M4U_PORT_MDP_WDMA		MT8167_LARB0_PORT(5)
+#define M4U_PORT_MDP_WROT		MT8167_LARB0_PORT(6)
+#define M4U_PORT_DISP_FAKE		MT8167_LARB0_PORT(7)
+
+/* IMG larb1*/
+#define M4U_PORT_CAM_IMGO		MT8167_LARB1_PORT(0)
+#define M4U_PORT_CAM_IMG2O		MT8167_LARB1_PORT(1)
+#define M4U_PORT_CAM_LSCI		MT8167_LARB1_PORT(2)
+#define M4U_PORT_CAM_ESFKO		MT8167_LARB1_PORT(3)
+#define M4U_PORT_CAM_AAO		MT8167_LARB1_PORT(4)
+#define M4U_PORT_VENC_REC		MT8167_LARB1_PORT(5)
+#define M4U_PORT_VENC_BSDMA		MT8167_LARB1_PORT(6)
+#define M4U_PORT_VENC_RD_COMV		MT8167_LARB1_PORT(7)
+#define M4U_PORT_CAM_IMGI		MT8167_LARB1_PORT(8)
+#define M4U_PORT_VENC_CUR_LUMA		MT8167_LARB1_PORT(9)
+#define M4U_PORT_VENC_CUR_CHROMA	MT8167_LARB1_PORT(10)
+#define M4U_PORT_VENC_REF_LUMA		MT8167_LARB1_PORT(11)
+#define M4U_PORT_VENC_REF_CHROMA	MT8167_LARB1_PORT(12)
+
+/* VDEC larb2*/
+#define M4U_PORT_HW_VDEC_MC_EXT		MT8167_LARB2_PORT(0)
+#define M4U_PORT_HW_VDEC_PP_EXT		MT8167_LARB2_PORT(1)
+#define M4U_PORT_HW_VDEC_VLD_EXT	MT8167_LARB2_PORT(2)
+#define M4U_PORT_HW_VDEC_AVC_MV_EXT	MT8167_LARB2_PORT(3)
+#define M4U_PORT_HW_VDEC_PRED_RD_EXT	MT8167_LARB2_PORT(4)
+#define M4U_PORT_HW_VDEC_PRED_WR_EXT	MT8167_LARB2_PORT(5)
+#define M4U_PORT_HW_VDEC_PPWRAP_EXT	MT8167_LARB2_PORT(6)
+
+#endif

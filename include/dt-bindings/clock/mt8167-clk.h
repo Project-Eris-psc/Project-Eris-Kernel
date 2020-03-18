@@ -1,0 +1,344 @@
+/*
+ * Copyright (c) 2016 MediaTek Inc.
+ * Author: James Liao <jamesjj.liao@mediatek.com>
+ *
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License version 2 as
+ * published by the Free Software Foundation.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ */
+
+#ifndef _DT_BINDINGS_CLK_MT8167_H
+#define _DT_BINDINGS_CLK_MT8167_H
+
+
+/* APMIXEDSYS */
+
+#define CLK_APMIXED_ARMPLL		0
+#define CLK_APMIXED_MAINPLL		1
+#define CLK_APMIXED_UNIVPLL		2
+#define CLK_APMIXED_MMPLL		3
+#define CLK_APMIXED_APLL1		4
+#define CLK_APMIXED_APLL2		5
+#define CLK_APMIXED_TVDPLL		6
+#define CLK_APMIXED_LVDSPLL		7
+#define CLK_APMIXED_HDMI_REF	8
+#define CLK_APMIXED_NR_CLK		9
+
+/* TOPCKGEN */
+
+#define CLK_TOP_CLK_NULL		0
+#define CLK_TOP_I2S_INFRA_BCK		1
+#define CLK_TOP_MEMPLL			2
+#define CLK_TOP_DSI0_LNTC_DSICK		3
+#define CLK_TOP_VPLL_DPIX		4
+#define CLK_TOP_LVDSTX_CLKDIG_CTS	5
+#define CLK_TOP_HDMTX_CLKDIG_CTS	6
+#define CLK_TOP_DMPLL			7
+#define CLK_TOP_MAINPLL_D2		8
+#define CLK_TOP_MAINPLL_D4		9
+#define CLK_TOP_MAINPLL_D8		10
+#define CLK_TOP_MAINPLL_D16		11
+#define CLK_TOP_MAINPLL_D11		12
+#define CLK_TOP_MAINPLL_D22		13
+#define CLK_TOP_MAINPLL_D3		14
+#define CLK_TOP_MAINPLL_D6		15
+#define CLK_TOP_MAINPLL_D12		16
+#define CLK_TOP_MAINPLL_D5		17
+#define CLK_TOP_MAINPLL_D10		18
+#define CLK_TOP_MAINPLL_D20		19
+#define CLK_TOP_MAINPLL_D40		20
+#define CLK_TOP_MAINPLL_D7		21
+#define CLK_TOP_MAINPLL_D14		22
+#define CLK_TOP_UNIVPLL_D2		23
+#define CLK_TOP_UNIVPLL_D4		24
+#define CLK_TOP_UNIVPLL_D8		25
+#define CLK_TOP_UNIVPLL_D16		26
+#define CLK_TOP_UNIVPLL_D3		27
+#define CLK_TOP_UNIVPLL_D6		28
+#define CLK_TOP_UNIVPLL_D12		29
+#define CLK_TOP_UNIVPLL_D24		30
+#define CLK_TOP_UNIVPLL_D5		31
+#define CLK_TOP_UNIVPLL_D20		32
+#define CLK_TOP_MMPLL380M		33
+#define CLK_TOP_MMPLL_D2		34
+#define CLK_TOP_MMPLL_200M		35
+#define CLK_TOP_LVDSPLL			36
+#define CLK_TOP_LVDSPLL_D2		37
+#define CLK_TOP_LVDSPLL_D4		38
+#define CLK_TOP_LVDSPLL_D8		39
+#define CLK_TOP_USB_PHY48M		40
+#define CLK_TOP_APLL1			41
+#define CLK_TOP_APLL1_D2		42
+#define CLK_TOP_APLL1_D4		43
+#define CLK_TOP_APLL1_D8		44
+#define CLK_TOP_APLL2			45
+#define CLK_TOP_APLL2_D2		46
+#define CLK_TOP_APLL2_D4		47
+#define CLK_TOP_APLL2_D8		48
+#define CLK_TOP_CLK26M			49
+#define CLK_TOP_CLK26M_D2		50
+#define CLK_TOP_MIPI_26M		51
+#define CLK_TOP_TVDPLL			52
+#define CLK_TOP_TVDPLL_D2		53
+#define CLK_TOP_TVDPLL_D4		54
+#define CLK_TOP_TVDPLL_D8		55
+#define CLK_TOP_TVDPLL_D16		56
+#define CLK_TOP_AHB_INFRA_D2		57
+#define CLK_TOP_NFI1X			58
+#define CLK_TOP_ETH_D2			59
+#define CLK_TOP_PWM_MM			60
+#define CLK_TOP_CAM_MM			61
+#define CLK_TOP_MFG_MM			62
+#define CLK_TOP_SPM_52M			63
+#define CLK_TOP_MIPI_26M_DBG		64
+#define CLK_TOP_SCAM_MM			65
+#define CLK_TOP_SMI_MM			66
+#define CLK_TOP_THEM			67
+#define CLK_TOP_APDMA			68
+#define CLK_TOP_I2C0			69
+#define CLK_TOP_I2C1			70
+#define CLK_TOP_AUXADC1			71
+#define CLK_TOP_NFI			72
+#define CLK_TOP_NFIECC			73
+#define CLK_TOP_DEBUGSYS		74
+#define CLK_TOP_PWM			75
+#define CLK_TOP_UART0			76
+#define CLK_TOP_UART1			77
+#define CLK_TOP_BTIF			78
+#define CLK_TOP_USB			79
+#define CLK_TOP_FLASHIF_26M		80
+#define CLK_TOP_AUXADC2			81
+#define CLK_TOP_I2C2			82
+#define CLK_TOP_MSDC0			83
+#define CLK_TOP_MSDC1			84
+#define CLK_TOP_NFI2X			85
+#define CLK_TOP_PMICWRAP_AP		86
+#define CLK_TOP_SEJ			87
+#define CLK_TOP_MEMSLP_DLYER		88
+#define CLK_TOP_SPI			89
+#define CLK_TOP_APXGPT			90
+#define CLK_TOP_AUDIO			91
+#define CLK_TOP_PMICWRAP_MD		92
+#define CLK_TOP_PMICWRAP_CONN		93
+#define CLK_TOP_PMICWRAP_26M		94
+#define CLK_TOP_AUX_ADC			95
+#define CLK_TOP_AUX_TP			96
+#define CLK_TOP_MSDC2			97
+#define CLK_TOP_RBIST			98
+#define CLK_TOP_NFI_BUS			99
+#define CLK_TOP_GCE			100
+#define CLK_TOP_TRNG			101
+#define CLK_TOP_SEJ_13M			102
+#define CLK_TOP_AES			103
+#define CLK_TOP_PWM_B			104
+#define CLK_TOP_PWM1_FB			105
+#define CLK_TOP_PWM2_FB			106
+#define CLK_TOP_PWM3_FB			107
+#define CLK_TOP_PWM4_FB			108
+#define CLK_TOP_PWM5_FB			109
+#define CLK_TOP_USB_1P			110
+#define CLK_TOP_FLASHIF_FREERUN		111
+#define CLK_TOP_26M_HDMI_SIFM		112
+#define CLK_TOP_26M_CEC			113
+#define CLK_TOP_32K_CEC			114
+#define CLK_TOP_66M_ETH			115
+#define CLK_TOP_133M_ETH		116
+#define CLK_TOP_FETH_25M		117
+#define CLK_TOP_FETH_50M		118
+#define CLK_TOP_FLASHIF_AXI		119
+#define CLK_TOP_USBIF			120
+#define CLK_TOP_UART2			121
+#define CLK_TOP_BSI			122
+#define CLK_TOP_GCPU_B			123
+#define CLK_TOP_RG_SPINOR		124
+#define CLK_TOP_RG_MSDC2		125
+#define CLK_TOP_RG_ETH			126
+#define CLK_TOP_RG_VDEC			127
+#define CLK_TOP_RG_FDPI0		128
+#define CLK_TOP_RG_FDPI1		129
+#define CLK_TOP_RG_AXI_MFG		130
+#define CLK_TOP_RG_SLOW_MFG		131
+#define CLK_TOP_RG_AUD1			132
+#define CLK_TOP_RG_AUD2			133
+#define CLK_TOP_RG_AUD_ENGEN1		134
+#define CLK_TOP_RG_AUD_ENGEN2		135
+#define CLK_TOP_RG_I2C			136
+#define CLK_TOP_RG_PWM_INFRA		137
+#define CLK_TOP_RG_AUD_SPDIF_IN		138
+#define CLK_TOP_RG_UART2		139
+#define CLK_TOP_RG_BSI			140
+#define CLK_TOP_RG_DBG_ATCLK		141
+#define CLK_TOP_RG_NFIECC		142
+#define CLK_TOP_RG_APLL1_D2_EN		143
+#define CLK_TOP_RG_APLL1_D4_EN		144
+#define CLK_TOP_RG_APLL1_D8_EN		145
+#define CLK_TOP_RG_APLL2_D2_EN		146
+#define CLK_TOP_RG_APLL2_D4_EN		147
+#define CLK_TOP_RG_APLL2_D8_EN		148
+#define CLK_TOP_APLL12_DIV0		149
+#define CLK_TOP_APLL12_DIV1		150
+#define CLK_TOP_APLL12_DIV2		151
+#define CLK_TOP_APLL12_DIV3		152
+#define CLK_TOP_APLL12_DIV4		153
+#define CLK_TOP_APLL12_DIV4B		154
+#define CLK_TOP_APLL12_DIV5		155
+#define CLK_TOP_APLL12_DIV5B		156
+#define CLK_TOP_APLL12_DIV6		157
+#define CLK_TOP_UART0_SEL		158
+#define CLK_TOP_GFMUX_EMI1X_SEL		159
+#define CLK_TOP_EMI_DDRPHY_SEL		160
+#define CLK_TOP_AHB_INFRA_SEL		161
+#define CLK_TOP_CSW_MUX_MFG_SEL		162
+#define CLK_TOP_MSDC0_SEL		163
+#define CLK_TOP_CAMTG_MM_SEL		164
+#define CLK_TOP_PWM_MM_SEL		165
+#define CLK_TOP_UART1_SEL		166
+#define CLK_TOP_MSDC1_SEL		167
+#define CLK_TOP_SPM_52M_SEL		168
+#define CLK_TOP_PMICSPI_SEL		169
+#define CLK_TOP_QAXI_AUD26M_SEL		170
+#define CLK_TOP_AUD_INTBUS_SEL		171
+#define CLK_TOP_NFI2X_PAD_SEL		172
+#define CLK_TOP_NFI1X_PAD_SEL		173
+#define CLK_TOP_MFG_MM_SEL		174
+#define CLK_TOP_DDRPHYCFG_SEL		175
+#define CLK_TOP_SMI_MM_SEL		176
+#define CLK_TOP_USB_78M_SEL		177
+#define CLK_TOP_SCAM_MM_SEL		178
+#define CLK_TOP_SPINOR_SEL		179
+#define CLK_TOP_MSDC2_SEL		180
+#define CLK_TOP_ETH_SEL			181
+#define CLK_TOP_VDEC_MM_SEL		182
+#define CLK_TOP_DPI0_MM_SEL		183
+#define CLK_TOP_DPI1_MM_SEL		184
+#define CLK_TOP_AXI_MFG_IN_SEL		185
+#define CLK_TOP_SLOW_MFG_SEL		186
+#define CLK_TOP_AUD1_SEL		187
+#define CLK_TOP_AUD2_SEL		188
+#define CLK_TOP_AUD_ENGEN1_SEL		189
+#define CLK_TOP_AUD_ENGEN2_SEL		190
+#define CLK_TOP_I2C_SEL			191
+#define CLK_TOP_AUD_I2S0_M_SEL		192
+#define CLK_TOP_AUD_I2S1_M_SEL		193
+#define CLK_TOP_AUD_I2S2_M_SEL		194
+#define CLK_TOP_AUD_I2S3_M_SEL		195
+#define CLK_TOP_AUD_I2S4_M_SEL		196
+#define CLK_TOP_AUD_I2S5_M_SEL		197
+#define CLK_TOP_AUD_SPDIF_B_SEL		198
+#define CLK_TOP_PWM_SEL			199
+#define CLK_TOP_SPI_SEL			200
+#define CLK_TOP_AUD_SPDIFIN_SEL		201
+#define CLK_TOP_UART2_SEL		202
+#define CLK_TOP_BSI_SEL			203
+#define CLK_TOP_DBG_ATCLK_SEL		204
+#define CLK_TOP_CSW_NFIECC_SEL		205
+#define CLK_TOP_NFIECC_SEL		206
+#define CLK_TOP_APLL12_CK_DIV0		207
+#define CLK_TOP_APLL12_CK_DIV1		208
+#define CLK_TOP_APLL12_CK_DIV2		209
+#define CLK_TOP_APLL12_CK_DIV3		210
+#define CLK_TOP_APLL12_CK_DIV4		211
+#define CLK_TOP_APLL12_CK_DIV4B		212
+#define CLK_TOP_APLL12_CK_DIV5		213
+#define CLK_TOP_APLL12_CK_DIV5B		214
+#define CLK_TOP_APLL12_CK_DIV6		215
+#define CLK_TOP_USB_78M			216
+#define CLK_TOP_MSDC0_INFRA		217
+#define CLK_TOP_MSDC1_INFRA		218
+#define CLK_TOP_MSDC2_INFRA		219
+#define CLK_TOP_NR_CLK			220
+
+/* INFRACFG */
+
+#define CLK_IFR_MUX1_SEL		0
+#define CLK_IFR_ETH_25M_SEL		1
+#define CLK_IFR_I2C0_SEL		2
+#define CLK_IFR_I2C1_SEL		3
+#define CLK_IFR_I2C2_SEL		4
+#define CLK_IFR_NR_CLK			5
+
+/* AUDIOTOP */
+
+#define CLK_AUD_AFE			0
+#define CLK_AUD_I2S			1
+#define CLK_AUD_22M			2
+#define CLK_AUD_24M			3
+#define CLK_AUD_INTDIR			4
+#define CLK_AUD_APLL2_TUNER		5
+#define CLK_AUD_APLL_TUNER		6
+#define CLK_AUD_HDMI			7
+#define CLK_AUD_SPDF			8
+#define CLK_AUD_ADC			9
+#define CLK_AUD_DAC			10
+#define CLK_AUD_DAC_PREDIS		11
+#define CLK_AUD_TML			12
+#define CLK_AUD_NR_CLK			13
+
+/* MFGCFG */
+
+#define CLK_MFG_BAXI			0
+#define CLK_MFG_BMEM			1
+#define CLK_MFG_BG3D			2
+#define CLK_MFG_B26M			3
+#define CLK_MFG_NR_CLK			4
+
+/* MMSYS */
+
+#define CLK_MM_SMI_COMMON		0
+#define CLK_MM_SMI_LARB0		1
+#define CLK_MM_CAM_MDP			2
+#define CLK_MM_MDP_RDMA			3
+#define CLK_MM_MDP_RSZ0			4
+#define CLK_MM_MDP_RSZ1			5
+#define CLK_MM_MDP_TDSHP		6
+#define CLK_MM_MDP_WDMA			7
+#define CLK_MM_MDP_WROT			8
+#define CLK_MM_FAKE_ENG			9
+#define CLK_MM_DISP_OVL0		10
+#define CLK_MM_DISP_RDMA0		11
+#define CLK_MM_DISP_RDMA1		12
+#define CLK_MM_DISP_WDMA		13
+#define CLK_MM_DISP_COLOR		14
+#define CLK_MM_DISP_CCORR		15
+#define CLK_MM_DISP_AAL			16
+#define CLK_MM_DISP_GAMMA		17
+#define CLK_MM_DISP_DITHER		18
+#define CLK_MM_DISP_UFOE		19
+#define CLK_MM_DISP_PWM_MM		20
+#define CLK_MM_DISP_PWM_26M		21
+#define CLK_MM_DSI_ENGINE		22
+#define CLK_MM_DSI_DIGITAL		23
+#define CLK_MM_DPI0_ENGINE		24
+#define CLK_MM_DPI0_PXL			25
+#define CLK_MM_LVDS_PXL			26
+#define CLK_MM_LVDS_CTS			27
+#define CLK_MM_DPI1_ENGINE		28
+#define CLK_MM_DPI1_PXL			29
+#define CLK_MM_HDMI_PXL			30
+#define CLK_MM_HDMI_SPDIF		31
+#define CLK_MM_HDMI_ADSP_BCK		32
+#define CLK_MM_HDMI_PLL			33
+#define CLK_MM_NR_CLK			34
+
+/* IMGSYS */
+
+#define CLK_IMG_LARB1_SMI		0
+#define CLK_IMG_CAM_SMI			1
+#define CLK_IMG_CAM_CAM			2
+#define CLK_IMG_SEN_TG			3
+#define CLK_IMG_SEN_CAM			4
+#define CLK_IMG_VENC			5
+#define CLK_IMG_NR_CLK			6
+
+/* VDECSYS */
+
+#define CLK_VDEC_CKEN			0
+#define CLK_VDEC_LARB1_CKEN		1
+#define CLK_VDEC_NR_CLK			2
+
+#endif /* _DT_BINDINGS_CLK_MT8167_H */
